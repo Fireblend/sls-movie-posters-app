@@ -5,6 +5,13 @@ Inspired by [pokepalettes](https://pokepalettes.com/)
 
 ## Running this:
 
+#### 0. Requirements
+
+* An AWS account
+* [AWS CLI](https://serverless.com/framework/docs/providers/aws/guide/credentials/) setup
+* [Serverless](https://serverless.com/framework/docs/providers/aws/guide/quick-start/) setup
+* A Python 3.8+ environment
+
 #### 1. Setting up the lambda function.
 Create a lambda function using Python 3.8 as its runtime.
 Paste or upload the code from `lambda_function.py`. Add a valid TMDB API Key to the corresponding variable in the code.
@@ -30,9 +37,8 @@ Create a new API using API Gateway with a `get` method pointing to the function 
 ```
 
 #### 2. Deploying the Serverless app.
-For this part you'll need a Python 3.9 environment, or change the environment in the `serverless.yaml` file.
 
-1. Install and set up the [AWS CLI](https://serverless.com/framework/docs/providers/aws/guide/credentials/) and [Serverless](https://serverless.com/framework/docs/providers/aws/guide/quick-start/) with your AWS credentials.
+1. Check the `serverless.yaml` file for anything you might want to modify (mainly make sure the Python version matches yours).
 2. Set the `API_BASE_URL` and `API_KEY` environment variables with the right values from your API Gateway.
 3. Install the required plugins in your cloned directory: `npm install --save serverless-wsgi serverless-python-requirements`
 4. Execute `sls deploy`
