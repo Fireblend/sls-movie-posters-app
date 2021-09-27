@@ -15,7 +15,7 @@ Finally, add the following layer arns to its configuration:
 * `arn:aws:lambda:us-east-1:770693421928:layer:Klayers-python38-requests:21`
 * `arn:aws:lambda:us-east-1:446751924810:layer:python-3-8-scikit-learn-0-23-1:2`
 
-Create a new API using API Gateway with a `get` method pointing to the function (enable `Lambda Proxy integration`). The function is set up to expect a `query` string parameter containing the movie title. Deploy it as part of a usage plan with an API Key. At this point you should be able to call the lambda through an API endpoint and get something like this in return:
+Create a new API using API Gateway with a `get` method pointing to the function (enable `Lambda Proxy integration`). The function is set up to expect a `query` string parameter containing the movie title. Deploy it as part of a usage plan with an API Key. At this point you should be able to call the lambda through an API endpoint and get something like this in return. Use curl or postman to test:
 
 ```
 '{"poster": "https://www.themoviedb.org/t/p/w500//7nO5DUMnGUuXrA4r2h6ESOKQRrx.jpg", 
