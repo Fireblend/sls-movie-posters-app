@@ -11,6 +11,7 @@ Inspired by [pokepalettes](https://pokepalettes.com/)
 * [AWS CLI](https://serverless.com/framework/docs/providers/aws/guide/credentials/) setup
 * [Serverless](https://serverless.com/framework/docs/providers/aws/guide/quick-start/) setup
 * A Python 3.8+ environment
+* A [TMDB API](https://developers.themoviedb.org/3) Key
 
 #### 1. Setting up the lambda function.
 Create a lambda function using Python 3.8 as its runtime.
