@@ -1,5 +1,6 @@
 # sls-movie-posters-app
 A Serverless Flask WebApp, extracts dominant colors from movie posters.
+
 See it live at https://movies.fireblend.com/
 
 Inspired by [pokepalettes](https://pokepalettes.com/) by Gus Glover.
