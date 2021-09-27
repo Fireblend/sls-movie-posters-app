@@ -9,7 +9,7 @@ Inspired by [pokepalettes](https://pokepalettes.com/)
 Create a lambda function using Python 3.8 as its runtime.
 Paste or upload the code from `lambda_function.py`. Add a valid TMDB API Key to the corresponding variable in the code.
 
-Finally, add the following layer arns to its configuration:
+Finally, add the following layer arns to its configuration. This adds dependencies not provided by the default 3.9 runtime:
 
 * `arn:aws:lambda:us-east-1:668099181075:layer:AWSLambda-Python38-SciPy1x:29`
 * `arn:aws:lambda:us-east-1:770693421928:layer:Klayers-python38-Pillow:13`
