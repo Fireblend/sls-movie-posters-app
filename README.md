@@ -27,10 +27,11 @@ Create a new API using API Gateway with a `get` method pointing to the function 
 ```
 
 #### 2. Deploying the Serverless app.
+For this part you'll need a Python 3.9 environment, or change the environment in the `serverless.yaml` file.
 
 1. Install and set up the [AWS CLI](https://serverless.com/framework/docs/providers/aws/guide/credentials/) and [Serverless](https://serverless.com/framework/docs/providers/aws/guide/quick-start/) with your AWS credentials.
 2. Set the `API_BASE_URL` and `API_KEY` environment variables with the right values from your API Gateway.
 3. Install the required plugins in your cloned directory: `npm install --save serverless-wsgi serverless-python-requirements`
 4. Execute `sls deploy`
 
-And that should be it! The previous command should point you to the application's URL.
+And that should be it! The previous command should point you to the newly deployed application's URL.
