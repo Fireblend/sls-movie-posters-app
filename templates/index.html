@@ -1,0 +1,113 @@
+<html>
+    <title>Movie Poster Palettes</title>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <style>
+        #hover-content {
+            display:none;
+            margin-left: 10px;
+        }
+        #parent:hover #hover-content {
+            display:block;
+        }
+        #footer {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            font-size: 18;
+            margin-right: 10;
+            margin-bottom: 10;
+            text-align: right;
+            background-color: rgba(255, 255, 255, 0.350);
+            border-radius: 10px;
+            padding: 10;
+            z-index: 2;
+        }
+        #primary {
+            text-align: right;
+            position: fixed;
+            margin-right: 10;
+            margin-top: 10;
+            top: 0;
+            right: 0;
+            font-size: 25;
+            background-color: rgba(255, 255, 255, 0.350);
+            border-radius: 10px;
+            padding: 10;
+            z-index: 2;
+        }
+        input[type=text] {
+            background-color: white;
+            background-position: 10px 10px;
+            font-size: 30;
+            border-radius: 9px;
+            font-family: 'Montserrat', sans-serif;
+            border-radius: 10px;
+        }
+        a {
+            color: rgb(202, 1, 95);
+            text-decoration: none;
+
+        }
+
+        .info a{position:relative;font-size: 20;}/* set stacking context -*/
+        .info a span{
+            font-size: 17;
+            position:absolute;
+            top:-999em;
+            left:-125px;
+            width:230px;
+            padding:5px;
+            text-decoration:none;
+            color: black;
+            background-color: rgba(255, 255, 255, 0.350);
+            border-radius: 10px;
+            padding: 10;
+        }
+        .info a:hover{visibility:visible}/* ie bug needed to make span show*/
+        .info a:hover span{top:50px;right:100px}/* show image on hover*/
+
+    </style>
+    <body style="background-color:{{data.primaryColor}}; font-family: 'Montserrat', sans-serif;">
+        
+        <div style="position: absolute; left: 0px; bottom: 0px; width: 30%; height: 100%; padding: 0px; z-index: 0;">
+            {% for x in data.otherColors %}
+            <div  id="parent" style="left: 0px; bottom: 0px; background-color: {{x.color}}; width: {{x.proportion*300}}%; height: 11.1%; padding: 0px; ">
+                <div id="hover-content" style="font-size: 25;">
+                    <b>{{x.color}}</b>
+                </div>
+            </div> 
+            {% endfor %}
+        </div> 
+        <center>
+        <div style="z-index: 1;position:relative;width: 50%; height: 100%; ">
+            
+                <form method="POST">
+                    <input name="query" placeholder="{{name}}" type="text">
+                </form>
+                <img src="{{data.poster}}" height=90% style="box-shadow: 8px 8px 10px rgb(0, 0, 0);">
+            
+        </div>
+        </center>
+
+        <div id="primary" class="info">
+            <b>
+                {{data.primaryColor}}
+                <br>
+                <a href="#null">
+                    What is this?
+                    <span style="text-align: left;">
+                        This application extracts the 10 most dominant colors from a movie's poster by using k-means clustering on its pixels' RGB values.<br><br>Posters provided by TMDB.
+                    </span>
+                </a>
+            </b>
+        </div>
+    
+    </body>    
+    <div id="footer">
+        Made by <a href="http://www.fireblend.com"><b>Fireblend</b></a><br>for <a href="http://www.wearegap.com"><b>GAP</b></a>'s 2021 Serverless Challenge
+    </div>
+</html>
