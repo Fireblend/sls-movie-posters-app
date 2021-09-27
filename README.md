@@ -6,7 +6,7 @@ Inspired by [pokepalettes](https://pokepalettes.com/)
 
 #### 1. Setting up the lambda function.
 Create a lambda function using Python 3.8 as its runtime.
-Paste or upload the code from `lambda_function.py` and add the following layers:
+Paste or upload the code from `lambda_function.py` and add the following layer arns to its configuration:
 
 * `arn:aws:lambda:us-east-1:668099181075:layer:AWSLambda-Python38-SciPy1x:29`
 * `arn:aws:lambda:us-east-1:770693421928:layer:Klayers-python38-Pillow:13`
