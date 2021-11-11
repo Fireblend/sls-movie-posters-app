@@ -10,7 +10,7 @@ Inspired by [pokepalettes](https://pokepalettes.com/) by Gus Glover.
 #### 0. Requirements
 
 * An AWS account
-* [AWS CLI](https://serverless.com/framework/docs/providers/aws/guide/credentials/) setup
+* [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) setup
 * [Serverless](https://serverless.com/framework/docs/providers/aws/guide/quick-start/) setup
 * A Python 3.8+ environment
 * A [TMDB API](https://developers.themoviedb.org/3) Key
