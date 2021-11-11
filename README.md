@@ -42,7 +42,7 @@ Create a new API using API Gateway with a `get` method pointing to the function 
 #### 2. Deploying the Serverless app.
 
 1. Check the `serverless.yaml` file for anything you might want to modify (mainly make sure the Python version matches yours).
-2. Set the `API_BASE_URL` and `API_KEY` environment variables with the right values from your API Gateway.
+2. Set the `API_BASE_URL` and `API_KEY` environment variables with the right values from your API Gateway (you can just paste them directly into the `serverless.yaml` file and `app.py` in the appropriate places if you'd rather not use environment variables).
 3. Install the required plugins in your cloned directory: `npm install --save serverless-wsgi serverless-python-requirements`
 4. Execute `sls deploy`
 
